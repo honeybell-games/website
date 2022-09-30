@@ -1,0 +1,261 @@
+// Header Sction Start
+
+.header {
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    height: 87px;
+    transition: all .5s;
+    z-index: 999;
+
+    .navbar {
+        padding: 0;
+
+        .navbar-right {
+            @include flex-box;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 999;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include respond (tabland) {
+                display: none;
+            }
+
+            li {
+                a {
+                    font-family: $fontRoboto;
+                    font-size: 16px;
+                    font-weight: $fontMid;
+                    color: $clrdefault;
+                    display: inline-block;
+                    margin-right: 30px;
+                    text-transform: uppercase;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $clrMain;
+                    }
+                }
+                &:last-child a {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.header-meta {
+    margin-right: 0px;
+
+    @include respond (tabland) {
+        margin-right: 60px;
+    }
+    @include respond (phone-sm) {
+        margin-right: 20px;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            a{
+                font-size: 15px;
+                color: $clrdefault;
+                margin-right: 30px;
+                display: inline-block;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: -4px;
+                    right: -16px;
+                    font-size: 12px;
+                    font-family: $fontRoboto;
+                    color: $clrdefault;
+                    font-weight: $fontLight;
+                    height: 18px;
+                    width: 18px;
+                    background: $clrMain;
+                    @include flex-box;
+                    border-radius: 50%;
+                }
+            }
+            &:last-child a {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+#menuTaggler {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $clrMain;
+    border: 2px solid $clrMain;
+    position: relative;
+    transition: all .5s;
+    display: none;
+    z-index: 999;
+
+    @include respond (tabland) {
+        display: block;
+    }
+
+    .menu-bar{
+        width: 50%;
+        height: 3px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: $clrdefault;
+        &:before,&:after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: $clrdefault;
+            top: -10px;
+            transition: all .3s;
+        }
+        &:after{
+            top: auto;
+            bottom: -10px;
+        }
+        &.close{
+            background: transparent;
+            &:before {
+                transform: rotate(45deg);
+                top: 48%;
+            }
+    
+            &:after {
+                transform: rotate(-45deg);
+                top: 48%;
+            }
+        }   
+    }
+}
+
+
+.nav-bg {
+    background: $clrBg;
+    padding: 25px 0;
+    -webkit-box-shadow: 0 31px 35px rgba(0, 0, 0, .1);
+    box-shadow: 0 31px 35px rgba(0, 0, 0, .1);
+}
+
+
+// Full Screen Overlay
+.overlay-slide {
+    position: fixed;
+    background: $clrBg;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 0;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+
+    
+    &.open {
+        height: 100%;
+        z-index: 9999;
+    }
+    .close-btn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background: $clrMain;
+        @include flex-box;
+        cursor: pointer;
+        z-index: 9999;
+
+        @include respond (phone-sm) {
+            right: 10px;
+            top: 25px;
+        }
+
+        a {
+            font-size: 20px;
+            color: $clrdefault;
+            display: contents;
+        }
+    }
+    nav {
+      position: relative;
+      height: 100%;
+      text-align: left;
+      @include flex-box;
+
+      .main-nav {
+            list-style: none;
+            height: auto; 
+            width: 100%;
+            line-height: 40px;
+            text-align: center;
+            display: flow-root;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            @include respond (phone) {
+                line-height: 30px;
+            }
+        
+            li {
+                display: block;
+                position: relative;
+            
+                a {
+                    font-family: $fontOswald;
+                    font-size: 43px;
+                    font-weight: $fontBold;
+                    display: block;
+                    margin: 20px 0px;
+                    position: relative;
+                    color: $clrdefault;
+                    text-decoration: none;
+                    overflow: hidden;
+                    text-transform: uppercase;
+                    transition: $transition;
+                    
+                    &:hover:before {
+                        background: $clrMain;
+                    }
+                    &:hover {
+                        color: $clrMain;
+                    }
+                    &:hover:before:focus {
+                        display: none;
+                    }
+                    @include respond (tabport) {
+                        font-size: 35px;
+                        margin: 13px 0px;
+                    }
+                    @media (max-width: 575px) {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .sub-item {
+                margin-left: 30px;
+            }
+        }
+    } 
+}
+
+// Header Sction End

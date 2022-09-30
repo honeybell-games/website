@@ -1,0 +1,67 @@
+// Team Section Start
+
+.team-section {
+    .team-wrapper {
+        background: $clrBg;
+        padding: 40px 15px;
+
+        @include respond (tabland) {
+            margin-bottom: 30px;
+        }
+
+        .team-image {
+            img {
+                width: 150px;
+                height: 150px;
+                display: block;
+                margin: 0 auto;
+                transition: $transition;
+            }
+        }
+        .team-content {
+            margin-top: 10px;
+            h4 a {
+                color: $clrdefault;
+                display: block;
+                text-transform: uppercase;
+            }
+            .icon-item {
+                margin-top: 20px;
+                a{
+                    font-size: 16px;
+                    color: $clrdefault;
+                    height: 40px;
+                    width: 40px;
+                    background: $clrBtn;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 10px;
+                    transition: $transition;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        background: $clrdefault;
+                        color: $clrMain;
+                    }
+
+                }
+            }
+        }
+        &:hover {
+            .team-image img {
+                transform: rotateY(360deg) scale(1.1);
+            }
+            .team-content {
+                h4 a {
+                    color: $clrMain;
+                }
+            } 
+        }
+    }
+}
+
+// Team Section End

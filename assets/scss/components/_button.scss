@@ -1,0 +1,50 @@
+
+
+.btn {
+    background-color: transparent;
+    color: $clrdefault;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: $fontSemi;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 20px 44px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    border: none;
+    outline: none;
+    touch-action: manipulation;
+    text-transform: uppercase;
+    transition: $transition;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transform: skewX(16deg);
+        z-index: -1;
+        opacity: 1;
+        background-image: none;
+        bottom: 0;
+        border-radius: 3px;
+        left: auto;
+        background-color: $clrBtn;
+        transition: $transition;
+    }
+    &:hover {
+        color: $clrdefault;
+    }
+    &:hover::after {
+        transform: skewX(-16deg);
+        background: $clrMain;
+    }
+}
+

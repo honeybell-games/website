@@ -1,0 +1,22 @@
+// Counter Section Start
+.counter-item {
+    background: $clrBg;
+    padding: 45px 0px;
+    border-radius: 5px;
+    h2 {
+        color: $clrdefault;
+        display: inline-block;
+    }
+    span {
+        font-size: 48px;
+        line-height: 50px;
+        font-weight: $fontSemi;
+    }
+    p {
+        margin-top: 15px;
+    }
+    @include respond (tabland) {
+        margin-bottom: 30px;
+    }
+}
+// Counter Section End

@@ -1,0 +1,167 @@
+// Footer Section Start
+
+.footer-section {
+    background: #141217c7;
+    padding-top: 190px;
+    position: relative;
+    margin-top: -90px;
+}
+
+.footer-widget {
+    // margin-bottom: 50px;
+
+    @include respond (tabland) {
+        margin-bottom: 30px;
+    }
+    .logo {
+        margin-bottom: 32px;
+        img {
+            width: auto;
+            height: auto;
+            display: block;
+        }
+    }
+    p {
+        color: #E9E9E9;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .para-title {
+        margin-top: 20px;
+
+        h6 {
+            font-size: 16px;
+            font-weight: $fontMid;
+            line-height: 24px;
+            color: $clrdefault;
+        }
+    }
+    .social-icon {
+        margin-top: 16px;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                a {
+                    font-size: 16px;
+                    color: $clrdefault;
+                    background: rgba(255, 255, 255, 0.1);
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    transition: $transition;
+
+                    &:hover {
+                        background: $clrMain;
+                        color: $clrdefault;
+                    }
+                }
+            }
+        }
+    }
+    .widget-title {
+        h4 {
+            font-family: $fontOswald;
+            font-weight: $fontMid;
+            display: inline-block;
+            margin-bottom: 24px;
+            color: $clrdefault;
+        }
+    }
+    ul li {
+        a {
+            font-family: $fontRoboto;
+            font-size: 16px;
+            font-weight: $fontRegular;
+            line-height: 24px;
+            color: #D9DBE1;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            transition: $transition;
+
+            &:hover {
+                color: $clrMain;
+            }
+
+            img {
+                width: auto;
+                height: auto;
+                display: block;
+                margin-right: 12px;
+                
+            }
+        }
+    }
+    .apps {
+        li {
+            margin-bottom: 22px;
+            img {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 85px;
+    padding: 20px 0px;
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // border-top:  1px solid #232C45;
+
+        @include respond (tabland) {
+            display: block;
+        }
+    }
+    .content p{
+        font-size: 16px;
+        font-weight: $fontRegular;
+        line-height: 24px;
+        color: $clrdefault;
+    }
+    .link {
+        a {
+            font-family:$fontRoboto;
+            font-size: 16px;
+            font-weight: $fontRegular;
+            line-height: 24px;
+            color: #D9DBE1;
+            display: inline-block;
+            position: relative;
+            margin-left: 16px;
+            transition: $transition;
+
+            &:hover {
+                color: $clrMain;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -10px;
+                transform: translateY(-50%);
+                width: 2px;
+                height: 13px;
+                background: #D9DBE1;
+            }
+            &:last-of-type::before {
+                display: none;
+            }
+        }
+        @include respond (tabland) {
+            margin-top: 20px;
+        }
+    }
+}
+
+// Footer Section End

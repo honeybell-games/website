@@ -1,0 +1,70 @@
+// Page Banner Start
+
+.page-banner {
+    background: url('../images/page-banner/banner-bg.jpg');
+    @include banner-size;
+    padding: 140px 0px 120px;
+
+    // @include respond (phone) {
+    //     padding: 50px 0px 110px;
+    // }
+}
+
+.page-banner-content {
+    margin: 0 auto;
+    h2 {
+        color: $clrdefault;
+        margin-bottom: 10px;
+    }
+    p {
+        color: #F9F9F9;
+        opacity: 0.7;
+        line-height: 30px;
+        max-width: 715px;
+        margin: 0 auto;
+    }
+}
+
+.breadcrumb-meta {
+    display: inline-flex;
+    align-items: center;
+    background: $clrdefault;
+    // border-radius: 30px;
+    padding: 15px 35px;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .link a {
+        font-family: $fontOswald;
+        font-size: 16px;
+        font-weight: $fontMid;
+        line-height: 20px;
+        color: $clrMain;
+        display: inline-block;
+        position: relative;
+        margin-right: 25px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -15px;
+            transform: translateY(-50%);
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            background: $clrMain;
+        }
+    }
+    span {
+        font-family: $fontOswald;
+        font-size: 16px;
+        font-weight: $fontMid;
+        line-height: 20px;
+        color: $clrheading;
+        display: inline-block;
+        position: relative;
+    }
+}

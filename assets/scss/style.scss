@@ -1,0 +1,85 @@
+/*-------------------------------------
+    Template Name: Gamex - eSports Html Template
+    Description: Gamex - eSports Html Template
+    Version: 1.0
+    Tags: game, esports, creative, dark, sports, products
+---------------------------------------*/
+
+// ---------------------------------------*/
+/*
+    Table of Context
+    -------------------------------
+    01. Common SCSS
+    02. Content Box
+    03. Icon Box
+    04. Order, Unorder List
+    05. Round One side 
+    06. Video side 
+    07. Overlap Image Box
+    08. Image Box
+
+    01. Header style
+    02. Banner style
+    03. Block style
+    04. About Section
+    05. Counter Section
+    06. Release Section
+    07. Team Section
+    08. Match Section
+    09. Stream Scetion
+    10. Product Section
+    11. Partner Section
+    12. Blog Section
+    13. CTA Section
+    14. Footer section
+    
+
+/**
+ * Fonts 
+ * Oswald
+ * Roboto
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+// Partial files
+@import "base/themes";
+@import "base/functions";
+@import "base/mixins";
+@import "base/reset";
+@import "base/global";
+@import "components/button";
+@import "components/header";
+@import "components/banner";
+@import "components/about";
+@import "components/counter";
+@import "components/image-box";
+@import "components/game";
+@import "components/products";
+@import "components/match";
+@import "components/cta-box";
+@import "components/streaming";
+@import "components/partner";
+@import "components/newsletter";
+@import "components/footer";
+@import "components/team";
+@import "components/login";
+@import "components/contact-form";
+@import "components/cart";
+@import "components/page-banner";
+@import "components/preloader";
+
+/**
+ *
+ * Common CSS
+ *
+ */
+
+ br {
+    margin:0.5em 0;/* FF for instance */
+    line-height: 2.5em;/* chrome for instance */
+ }
+
+ body {
+    @include color-scheme($scheme-secondary ...)
+ }

@@ -1,0 +1,247 @@
+// Image-Box Start
+
+.image-box {
+    background: $clrBg;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: $transition;
+
+    @include respond (tabland) {
+        margin-bottom: 30px;
+    }
+    .image {
+        position: relative;
+        overflow: hidden;
+        transition: $transition;
+
+        img {
+            transition: all 1s;
+        }
+    }
+
+    .content-box {
+        padding: 30px 20px;
+        h4 {
+            margin: 16px 0px;
+            a {
+                color: $clrdefault;
+                display: inline-block;
+                text-transform: capitalize;
+                transition: $transition;
+    
+                &:hover {
+                    color: $clrMain;
+                }
+            }
+        }
+        h5 {
+            margin-bottom: 16px;
+            a {
+                color: $clrheading;
+                display: inline-block;
+                transition: $transition;
+    
+                &:hover {
+                    color: $clrMain;
+                }
+            }
+        }
+        p {
+            // font-size: 14px;
+            line-height: 22px;
+            margin-bottom: 30px;
+            text-transform: capitalize;
+        }
+        
+        @include respond (tabland) {
+            padding: 30px 20px;
+        }
+        @include respond (tabport) {
+            padding: 30px 10px;
+        }
+    }
+    .icon {
+        height: 110px;
+        width: 110px;
+        background: transparent;
+        border-radius: 50%;
+        @include flex-box;
+        transition: $transition;
+
+        svg {
+            width: 55px;
+            transition: $transition;
+            path {
+                transition: $transition;
+            }
+        }
+    }
+    .item-btn {
+        a {
+            font-family: $fontOswald;
+            font-size: 16px;
+            color: $clrdefault;
+            display: inline-block;
+            font-weight: $fontRegular;
+            line-height: 24px;
+            text-transform: capitalize;
+            transition: $transition;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 2px;
+                width: 0;
+                background: $clrMain;
+                transition: $transition;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+    &:hover {
+        box-shadow: 0px 28px 40px rgba(14, 30, 53, 0.2);
+
+        .content-box {
+            h5 a,
+            h4 a {
+                color: $clrMain;
+            }
+        }
+        .image img{
+            transform: scale(1.3) rotate(5deg);
+        }
+        .item-btn a {
+            &::after {
+                width: 100%;
+            }
+        }
+        .icon {
+            background: rgba(255, 102, 0, 0.06);
+
+            svg {
+                width: 50px;
+                path {
+                    fill : $clrMain
+                }
+            }
+        }
+    }
+}
+
+.meta-tag {
+    ul {
+        @include flex-box;
+
+        li {
+            a {
+                font-family: $fontRoboto;
+                font-size: 12px;
+                font-weight: $fontRegular;
+                color: $clrPrimary;
+                text-transform: uppercase;
+                display: inline-block;
+                margin-right: 15px;
+                padding-right: 15px;
+                position: relative;
+    
+                i {
+                    margin-right: 8px;
+                }
+    
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 2px;
+                    background: $clrMain;
+                }
+            }
+            &:last-child a {
+                margin-right: 0;
+                padding-right: 0;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// Image-Box V2 Start
+
+// .image-box.v2 {
+//     .content-box {
+//         h4 {
+//             font-size: 20px;
+//             line-height: 30px;
+//             margin-bottom: 6px;
+//         }
+//         p {
+//             font-size: 15px;
+//             line-height: 22px;
+//             margin-bottom: 20px;
+//         }
+//         @include respond (tabland) {
+//             padding: 30px 20px;
+//         }
+//     }
+//     .prices {
+//         border-top: 0.8px solid #E9E9E9;
+//         padding-top: 30px;
+//         h6 {
+//             font-family: $fontOswald;
+//             font-size: 15px;
+//             font-weight: $fontRegular;
+//             line-height: 22px;
+//             text-transform: capitalize;
+
+//             span {
+//                 font-weight: $fontMid;
+//                 color: $clrMain;
+//             }
+//         }
+//     }
+// }
+
+// Image-Box V2 End
+
+// Image-Box V3 Start
+
+// .image-box.v3 {
+//     box-shadow: 0px 4px 8px rgba(14, 30, 53, 0.16);
+//     border-radius: 8px;
+//     padding: 40px 40px 10px;
+//     margin-bottom: 20px;
+
+//     .content-box {
+//         padding: 10px 10px 30px;
+
+//         @include respond (tabport) {
+//             padding: 10px 0px 30px;
+//         }
+//     }
+//     &:hover {
+//         box-shadow: 0px 28px 40px rgba(14, 30, 53, 0.2);
+//     }
+//     @include respond (medium) {
+//         padding: 40px 20px 10px;
+//     }
+//     @include respond (tabport) {
+//         padding: 40px 15px 10px;
+//     }
+// }
+
+
