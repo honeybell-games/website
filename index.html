@@ -1,469 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Honeybell Games</title>
-
-	<!-- FONT AWESOME -->
-	<link rel="stylesheet" href="assets/css/all.min.css">
-
-	<!-- THEMIFY ICON -->
-	<link rel="stylesheet" href="assets/css/themify-icons.css">
-
-	<!-- BOOTSTRAP -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-	<!-- SWIPER SLIDER -->
-	<link rel="stylesheet" href="assets/css/swiper.min.css">
-
-	<!-- LIGHT BOX -->
-	<link rel="stylesheet" href="assets/css/lightbox.min.css">
-
-	<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
-
-	<!-- CUSTOM CSS -->
-	<link rel="stylesheet" href="assets/style/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Signika&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Honeybell Games</title>
 </head>
+<body>
+    <section id="hero">
+        <div class="container max-w-1xl mx-auto px-1 py-12">
+            <nav class="flex items-center justify-between font-bold text-white text-2xl">
+                <img src="assets/logo.png" alt="">
+                <div class="hidden h-15 font-signika md:flex md:space-x-8">
+                    <div class="group">
+                        <a href="#feature">About</a>
+                        <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                    </div>
+                    <div class="group">
+                        <a href="https://www.linkedin.com/company/86389238/jobs/" target="_blank">Careers</a>
+                        <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                    </div>
+                    <div class="group">
+                        <a href="#creations">Games</a>
+                        <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                    </div>
+                    <div class="group">
+                        <a href="#footer">Contacts</a>
+                        <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                    </div>
+                </div>
+                <!-- @todo Hamburger Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" type="button" class="z-40 block hamburger md:hidden focus:outline-none">
+                        <span class="hamburger-top"></span>
+                        <span class="hamburger-middle"></span>
+                        <span class="hamburger-bottom"></span>
+                    </button>
+                </div>
+            </nav>
+            <!-- @todo - Mobile Menu -->
+            <div id="menu" class="absolute top-0 bottom-0 left-0 hidden  flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-zinc-800/95">
+                <a href="#feature" class="hover:text-red-400">About</a>
+                <a href="https://www.linkedin.com/company/86389238/jobs/" target="_blank" class="hover:text-red-400">Careers</a>
+                <a href="#creations" class="hover:text-red-400">Games</a>
+                <a href="#footer" class="hover:text-red-400">Contacts</a>
+            </div>
 
-<body id="dark-bg">
-	<!-- Preloader -->
-	<div class="preloader-bar">
-		<div class="status">
-			<div class="bar bar1"></div>
-			<div class="bar bar2"></div>
-			<div class="bar bar3"></div>
-			<div class="bar bar4"></div>
-			<div class="bar bar5"></div>
-			<div class="bar bar6"></div>
-			<div class="bar bar7"></div>
-			<div class="bar bar8"></div>
-		</div>
-	</div>
-	<!-- Preloader -->
-	<!-- Scroll-top -->
-	<button class="scroll-top scroll-to-target" data-target="html">
-		<i class="fas fa-angle-up"></i>
-	</button>
-	<!-- Scroll-top-end-->
-	<!-- Body Shape -->
-	<body>
-		
-	</body>
-	<!-- Header Start -->
-	<header class="header sticky-top">
-		<div class="container">
-			<nav class="navbar">
-				<div class="navbar-right ml-auto">
-					<div class="logo">
-						<a href="./index.html"><img src="assets/images/logo/site_logo.png" alt="logo"></a>
-					</div>
-					<ul class="nav-item">
-						<li><a href="./index.html">Home</a></li>
-						<li><a href="#about">About Us</a></li>
-						<li><a href="#games">Games</a></li>
-						<li><a href="#" data-bs-toggle="modal" data-bs-target="#contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!-- Header End -->
+            <div class="max-w-lg mt-32 mb-32 p-4 font-sans text-4xl text-white uppercase border-1 md:p-10 md:m-32 md:mx-0 mdLtext-6xl bg-[#1d1d1d80]">
+                Next-Generation <br> Innovators
+            </div>
+        </div>
+    </section>
 
-	<!-- Full Screen Overlay -->
-	<div class="overlay-slide" id="overlay">
-		<nav class="overlay-menu">
-			<div class="close-btn"><a href="javascript:void()"><i class="fas fa-times"></i></a></div>
-			<ul class="main-nav">
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="#about">About Us</a></li>
-				<li><a href="#games">Games</a></li>
-				<li><a href="#" data-bs-toggle="modal" data-bs-target="#contact">Contacts</a></li>
-			</ul>
-		</nav>
-	</div>
-	<!-- Full Screen Overlay -->
+    <section id="feature">
+        <div class="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0">
+            <img src="assets/desktop/image-interactive.png" alt="">
 
-	<!-- Banner Section Start -->
-	<section class="banner-section p-0">
-		<div class="banner-slider swiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<div class="single-slide" style="background-image: url(assets/images/banner/illustration\ b.jpg)">
-						<div class="container">
-							<div class="row">
-								<div class="col-12">
-									<div class="slide-caption">
-										<h6>OUR FAVOURITES</h6>
-										<h1>Prison<br><span>Troubles</span></h1>
-										<p>
-											Escape the prison! Show your style!
-										</p>
-										<div class="banner-btn">
-											<a href="https://honeybell-entertainment.itch.io/prison-troubles" target="_blank" class="btn">Find More</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="single-slide" style="background-image: url(assets/images/banner/background-dip-in.jpg)">
-						<div class="container">
-							<div class="row">
-								<div class="col-12">
-									<div class="slide-caption">
-										<h6>OUR FAVOURITES</h6>
-										<h1>Let's<br><span>Relax</span></h1>
-										<p>
-											In the mood for something casual?
-										</p>
-										<div class="banner-btn">
-											<a href="https://play.google.com/store/apps/details?id=com.stangvel.dipin" target=”_blank” class="btn">Find More</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="swipe-button">
-				<div class="swiper-button-next"><i class="fas fa-arrow-left"></i></div>
-				<div class="swiper-button-prev"><i class="fas fa-arrow-right"></i></div>
-			</div>
-		</div>
-	</section>
-	<!-- Banner Section End -->
-
-	<!-- About Section Start -->
-	<section class="about-section pb-0" id="about">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section-title text-center">
-						<h2>About <span>Us</span></h2>
-						<p>
-							We are a new Indie Games Development Company and our dream is to create great games that as
-							many people as possible play for years and that are remembered forever.
-						</p>
-						<span class="line">
-							<img src="assets/images/banner/line.png" alt="line" class="w-auto">
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="row align-items-center">
-					<div class="about-image">
-						<img src="assets/images/about/400x500.png" alt="about">
-						<br>
-						<div class="section-title text-center">
-							<a href="#" data-bs-toggle="modal" data-bs-target="#contact" class="btn">Contact Us</a>
-						</div>
-					</div>
-			</div>
-		</div>
-	</section>
-	<!-- About Section End -->
-
-	<!-- Streaming Section Start -->
-	<section class="streaming-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section-title text-center">
-						<h2>Our Live <span>Streaming</span></h2>
-						<p>
-							Follow us on Twitch and YouTube as we showcase weekly new content and play the best of our games.
-						</p>
-						<span class="line">
-							<img src="assets/images/banner/line.png" alt="line" class="w-auto">
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-12 m-auto">
-					<div class="srteming-wrapper">
-						<div class="stream-img">
-							<div class="video-bg round">
-								<img src="assets/images/streaming/typography.jpg" alt="stream" />
-								<div class="fancy-box">
-									<figure class="video-box round-os">
-										<a data-fancybox data-width="640" data-height="360" class="video-btn"
-											href="https://www.youtube.com/watch?v=uEpFYhOoiQ8"><i
-												class="fas fa-play"></i></a>
-									</figure>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Streaming Section End -->
-
-	<!-- Blog Section Start -->
-	<section class="blog-section" id="games">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="section-title text-center">
-						<h2>Our <span>Games</span></h2>
-						<span class="line">
-							<img src="assets/images/banner/line.png" alt="line" class="w-auto">
-						</span>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="image-box text-center">
-						<div class="image">
-							<img src="assets/images/blog/dip-in-380-285.png" alt="Blog_image">
-						</div>
-						<div class="content-box">
-							<h4 class="h4">
-								<a href="https://play.google.com/store/apps/details?id=com.stangvel.dipin" target=”_blank”>DipIn</a>
-							</h4>
-							<div class="item-btn">
-								<a href="https://play.google.com/store/apps/details?id=com.stangvel.dipin" target=”_blank”>Download Now</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="image-box text-center">
-						<div class="image">
-							<img src="assets/images/blog/prison-trouble-380-285.png" alt="Blog_image">
-						</div>
-						<div class="content-box">
-							<h4 class="h4">
-								<a href="https://honeybell-entertainment.itch.io/prison-troubles" target=”_blank”>Prison Troubles</a>
-							</h4>
-							<div class="item-btn">
-								<a href="https://honeybell-entertainment.itch.io/prison-troubles" target="_blank">Learn More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="image-box text-center">
-						<div class="image">
-							<img src="assets/images/blog/puzzle-collection-380-285.png" alt="Blog_image">
-						</div>
-						<div class="content-box">
-							<h4 class="h4">
-								<a href="#games">Honeybell's Puzzle Collection</a>
-							</h4>
-							<div class="item-btn">
-								<i style="color:LightGray">Coming soon...</i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Blog Section End -->
-
-	<!-- Cta Section Start -->
-	<section class="cta-section pt-0">
-		<div class="container">
-			<div class="cta-wrapper">
-				<div class="row align-items-center">
-					<div class="col-lg-6">
-						<div class="cta-item">
-							<div class="span">Let's Play together</div>
-								<h3>JOIN <span>PRISON TROUBLES</span> COMMUNITY TODAY!</h3>
-								<p>
-									Find other players, join in matches, share your progress, exchange game items and much more. Join the community on Discord and get started.
-								</p>
-							<a href="https://discord.gg/SUzZSXhZAW" target=”_blank” class="btn">Join Community</a>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="cta-image">
-							<img src="assets/images/cta-box/492x442.png" alt="cta-img">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Cta Section End -->
-
-	<!-- NewsLetter Section Start -->
-	<section class="newsletter-section p-0 ">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="newsletter-wrapper">
-						<div class="row align-items-center">
-							<div class="col-lg-6">
-								<div class="newsletter-title">
-									<h3>Subscribe Our <span>Newletter</span></h3>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="newsletter-form">
-									<form action="#">
-										<input type="email" name="email" class="form-control"
-											placeholder="yourmail@mail.com">
-										<button type="submit" class="btn">Subscribe</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- NewsLetter Section End -->
-
-	<!-- Footer Section Start -->
-	<footer class="footer-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-md-4 col-sm-6">
-					<div class="footer-wrapper">
-						<div class="footer-widget">
-							<div class="logo title">
-								<a href="#"><img src="/assets/images/logo/site_logo.png" alt="logo"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-5 col-md-4 col-sm-6">
-					<div class="footer-wrapper">
-						<div class="footer-widget">
-							<div class="widget-title">
-								<h4>Follow Us</h4>
-								<div class="social-icon">
-									<ul>
-										<li><a href="https://www.instagram.com/honeybell_games/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-										<li><a href="https://www.linkedin.com/company/honeybell-games/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-										<li><a href="https://honeybell-entertainment.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a></li>
-										<!-- <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
-										<li><a href="https://www.youtube.com/channel/UCaljjHorpBxXJgOCCc34YBA" target="_blank"><i class="fab fa-youtube"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6 col-sm-6">
-					<div class="footer-wrapper">
-						<div class="footer-widget">
-							<div class="widget-title">
-								<h4>MOBILE GAMES</h4>
-							</div>
-							<div class="apps">
-								<ul>
-									<li><a href="https://play.google.com/store/apps/dev?id=5308746409801598426" target="_blank"><img src="assets/images/footer/app_02.png" alt="apps"></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="footer-content text-center">
-							<div class="content">
-								<p>© 2022 All rights reserved.</p>
-							</div>
-							<div class="link">
-								<a href="#">Privacy Policy</a>
-
-								<a href="#">Disclaimer</a>
-								<a href="#">Terms & Conditions</a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- Footer Section End -->
-
-	<!-- Contact Modal Start -->
-	<div class="modal fade contact-modal" id="contact" aria-hidden="true" tabindex="-1">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i
-							class="fas fa-times"></i></button>
-				</div>
-				<div class="modal-body">
-					<div class="form form-bg">
-						<div class="contact-title">
-							<h3>Contact<span>.</span></h3>
-						</div>
-						<form action="#" class="mt-45">
-							<div class="row">
-								<div class="col-lg-6">
-									<input type="text" name="name" class="form-control" placeholder="Name*">
-								</div>
-								<div class="col-lg-6">
-									<input type="email" name="email" class="form-control" placeholder="Email*">
-								</div>
-								<div class="col-12">
-									<textarea name="area" cols="30" rows="6" class="form-control form-area"
-										placeholder="Your message"></textarea>
-								</div>
-								<div class="col-12 text-center">
-									<button type="submit" class="btn">send a message</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Contact Modal End-->
-
-	<!-- Search Modal Start -->
-	<div class="modal fade search-modal" id="search" aria-hidden="true" tabindex="-1">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-				</div>
-				<div class="modal-body">
-					<div class="search-bar">
-						<div class="form">
-							<form action="#">
-								<input type="search" name="search" class="form-control" placeholder="Search">
-								<button type="submit" class="sub-btn"><i class="fas fa-search"></i></button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Search Modal End-->
-
-	<script src="assets/js/jquery-3.6.0.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/swiper.min.js"></script>
-	<script src="assets/js/lightbox.min.js"></script>
-	<script src="assets/js/jquery.fancybox.min.js"></script>
-	<script src="assets/js/counterup.min.js"></script>
-	<script src="assets/js/waypoints.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-	<script src="assets/js/script.js"></script>
-
+            <div class="top-24 pr-0 bg-white md:absolute md:right-0 md:py-10 md:pl-20">
+                <h2 class="max-w-lg mt-10 mb-6 font-sans text-4xl text-center text-gray-900 uppercase md:text-5xl md:mt-0 md:text-left">
+                    Honeybell Games
+                </h2>
+                <p class="max-w-md text-center md:text-left">
+                    At our game studio, we specialize in creating innovative, competitive online games and blockchain gaming experiences using NFTs. Our team is dedicated to pushing the boundaries of what's possible in the gaming industry, combining cutting-edge technology with thrilling gameplay to create immersive experiences for players around the world. With a focus on innovation and excellence, we strive to build franchises that stand the test of time and captivate audiences across multiple mediums. Our games have the potential to transform the gaming industry, and we're excited to share our vision with players everywhere.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="creations">
+        <div class="container max-w-6xl mx-auto my-32 px-7 text-gray-900 md:px-0">
+            <div class="flex justify-center mb-20 md:justify-between">
+                <h2 class="text-4xl text-center uppercase md:text-left md:text-5xl">
+                    Our Creations
+                </h2>
+            </div>
+            <div class="item-container">
+                <div class="group item">
+                    <a href="https://honeybell-entertainment.itch.io/prison-troubles" target="_blank">
+                        <img src="assets/desktop/escape_quest_promo_1.png" alt="escape_quest" class="hidden w-full duration-200 md:block group-hover:scale-110">
+                        <img src="assets/mobile/escape_quest_promo_2.png" alt="escape_quest" class="w-full md:hidden">
+                        <div class="item-gradient"></div>
+                        <h5>Escape Quest</h5>
+                    </a>
+                </div>
+                <div class="group item">
+                    <a href="#" target="_blank"></a>
+                        <img src="assets/desktop/suds_promo.png" alt="suds" class="hidden w-full duration-200 md:block group-hover:scale-110">
+                        <img src="assets/mobile/suds_promo_2.png" alt="suds" class="w-full md:hidden">
+                        <div class="item-gradient"></div>
+                        <h5>Suds</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center mb-20 mt-20 md:justify-between">
+                <h3 class="text-2xl text-center uppercase md:text-left md:text-3xl">
+                    Casual Games
+                </h3>
+            </div>
+            <div class="item-container mt-10">
+                <div class="group item">
+                    <a href="https://play.google.com/store/apps/details?id=com.stangvel.dipin" target="_blank">
+                        <img src="assets/desktop/dip_in_promo.png" alt="" class="hidden w-full duration-200 md:block group-hover:scale-110">
+                        <img src="assets/mobile/dip_in_promo_2.png" alt="" class="w-full md:hidden">
+                        <div class="item-gradient"></div>
+                        <h5>Dip In</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="bg-black">
+        <div class="container max-w-6xl py-10 mx-auto">
+            <div class="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start">
+                <div class="flex flex-col items-center space-y-8 md:items-start md:space-y-4">
+                    <div class="h-8">
+                        <img src="assets/logo.svg" alt="" class="md:ml-3 h-10">
+                    </div>
+                    <div class="flex flex-col items-center space-y-4 font-bold text-white md:flex-row md:space-y-0 md:space-x-6 md:ml-3">
+                        <div class="h-10 group">
+                            <a href="#feature">About</a>
+                            <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                        </div>
+                        <div class="h-10 group">
+                            <a href="https://www.linkedin.com/company/86389238/jobs/" target="_blank">Careers</a>
+                            <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                        </div><div class="h-10 group">
+                            <a href="#creations">Games</a>
+                            <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                        </div><div class="h-10 group">
+                            <a href="#footer">Contacts</a>
+                            <div class="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-start justify-between space-y-4 text-gray-500">
+                    <div class="flex items-center justify-center space-x-4 md:justify-end mx-auto md:mx-0">
+                        <div class="h-8 group">
+                            <a href="mailto:honeybellgames@gmail.com" target="_blank"><img src="assets/icon-mail.svg" alt="email" class="h-6"></a>
+                        </div>
+                        <br>
+                        <div class="h-8 group">
+                            <a href="https://www.linkedin.com/company/honeybell-games/" target="_blank"><img src="assets/icon-linkedin.svg" alt="linkedin" class="h-6"></a>
+                        </div>
+                        <div class="h-8 group">
+                            <a href="https://www.instagram.com/honeybell_games/" target="_blank"><img src="assets/icon-instagram.svg" alt="instagram" class="h-6"></a>
+                        </div>
+                        <div class="h-8 group">
+                            <a href="https://honeybell-entertainment.itch.io/" target="_blank"><img src="assets/icon-itch-io.svg" alt="itch.io" class="h-6"></a>
+                        </div>
+                        <div class="h-8 group">
+                            <a href="https://www.youtube.com/channel/UCaljjHorpBxXJgOCCc34YBA" target="_blank"><img src="assets/icon-youtube.svg" alt="youtube" class="h-6"></a>
+                        </div>
+                    </div>
+                    <div class="font-bold">&copy;2023 Honeybell Games. All Rights Reserved</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
