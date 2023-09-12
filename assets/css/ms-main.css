@@ -789,8 +789,8 @@ h6 {
     color: var(--color-contrast-high);
 }
 
-.outlined-text {
-    -webkit-text-stroke: .8px black;
+.shadowed-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text-xxxl {
