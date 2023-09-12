@@ -789,6 +789,10 @@ h6 {
     color: var(--color-contrast-high);
 }
 
+.outlined-text {
+    -webkit-text-stroke: .8px black;
+}
+
 .text-xxxl {
     font-size: var(--text-xxxl, 2.488em);
 }
